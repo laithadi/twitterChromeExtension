@@ -1,0 +1,32 @@
+{
+	"name": "TwitterExt",
+	"version": "1.0",
+    "manifest_version": 2'
+    "description": "A twitter button to access twitter from the toolbar",
+
+    ---Override pages are a way to substitute an HTML file from your extension for a page that Google Chrome normally provides.
+    In addition to HTML, an override page usually has CSS and JavaScript code.---
+
+    "chrome_url_overrides" : {
+        "newtab" : "opentwitter.html"
+    },
+
+
+    ---The permissions hash is related directly to the use of API’s. 
+    “To use most chrome.* APIs, your extension or app must declare its intent in the “permissions” field of the manifest---
+
+    "permissions": ["tabs","activeTab", "storage"],
+    
+
+    ---
+	"background": {
+		"scripts": ["opentwitter.html"]
+    },
+
+
+    --- browser action is used so the button is available at any time while on chrome --- 
+	"browser_action" : {
+        "default_icons" : "twitter111.png"
+    }
+    
+}
